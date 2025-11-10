@@ -1,0 +1,110 @@
+site_name: 'AiStudio在线文档'
+site_url: 'https://xpulink.net/docs/'
+site_description: 'AiStudio 在线文档'
+site_author: 'AiStudio 团队'
+repo_name: 'AiStudio'
+repo_url: 'https://jihulab.com/rg_code/gpulink/gpuvirtuplatform'
+
+edit_uri: https://jihulab.com/rg_code/gpulink/gpuvirtuplatform
+docs_dir: manual
+theme:
+    name: 'material'
+    logo: 'img/logo.png'
+    favicon: 'img/logo.png'
+    language: 'zh'
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - django
+    palette:
+        - scheme: default
+          accent: teal
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to dark mode
+        - scheme: slate
+          accent: teal
+          toggle:
+              icon: material/weather-night
+              name: Switch to light mode
+    features:
+        - navigation.instant
+        - navigation.tracking
+        - navigation.indexes
+        - navigation.top
+        - search.suggest
+        - search.highlight
+        - search.share
+        - header.autohide
+        - content.tabs.link
+    custom_dir: "theme"
+nav:
+    - 产品介绍: index.md
+    - 快速入门: quick_start.md
+    - 模型推理: user_manual/inference.md
+    - 工具调用:
+        - 演示项目:
+              - 模型评估平台: user_manual/evaluation.md
+              - LoRA: user_manual/lora.md
+              - RAG: user_manual/rag.md
+    - 联系我们: contact.md
+    
+markdown_extensions:
+    - admonition
+    - codehilite:
+          guess_lang: True
+          linenums: False
+    - toc:
+          permalink: True
+    - footnotes
+    - attr_list
+    - def_list
+    - tables
+    - abbr
+    - md_in_html
+    - pymdownx.extra
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+          emoji_generator: !!python/name:pymdownx.emoji.to_png
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist
+    - pymdownx.tilde
+    - pymdownx.betterem
+    - pymdownx.progressbar
+    - pymdownx.tabbed:
+        alternate_style: true
+
+extra_css:
+    - css/extra.css
+
+copyright: Copyright &copy; 2014-2025 <a href="https://www.semieye.com/">上海睿光智泽科技有限公司</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">苏ICP备2024147974号-1</a>
+
+plugins:
+    - search:
+          lang:
+              - en
+              - ja
+          separator: '[\s\-\.]+'
+extra:
+    version:
+      provider: mike
+      warning: false
+    # analytics:
+    #   provider: google
+    #   property: G-3TWT2BFLFM
+    social:
+      # - icon: fontawesome/brands/github
+      #   link: https://jihulab.com/rg_code/gpulink/gpuvirtuplatform
+      - icon: fontawesome/solid/envelope
+        link: mailto:contact@semieye.com
+      - icon: fontawesome/solid/phone
+        link: tel://15168286162
